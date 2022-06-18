@@ -63,11 +63,11 @@ console.log ('item_7 == ', typeof(item_7), 'item_7_type == ', item_7_type)
 // 32. Если age_1  > age_3, вывести в консоль “Keep calm and look Culture channel”.
 // 33. Иначе выводите “Technical work”.
 let age_1 = 10
-let age_2 = 18
-let age_3 = 60
+const age_2 = 18
+const age_3 = 60
 
 if (age_1 < age_2){
-    console.log('You do not have access cause your age is' + age_1 + 'It is less then')
+    console.log('You do not have access cause your age is ' + age_1 + ' It is less then')
 }
 else if (age_1 >=  age_2 && age_1 <  age_3){
     console.log('Welcome!')
@@ -78,3 +78,114 @@ else if (age_1  > age_3){
 else {
     console.log('Technical work')
 }
+
+// 1*:
+// Преобразовать написанный код в 26-33 пунктах в
+//  функцию, принимающую на вход возраст.
+// Пример: const checkAge = function(age) {
+// Ваши преобразования
+// }
+// Вывести в консоль результат работы функции с
+//  возрастами 17, 18, 61
+console.log('1*')
+
+const check_age = function(age){
+    if (age < age_2){
+        console.log('You do not have access cause your age is ' + age + ' It is less then')
+    }
+    else if (age >=  age_2 && age <  age_3){
+        console.log('Welcome!')
+    }
+    else if (age  > age_3){
+        console.log('Keep calm and look Culture channel!')
+    }
+    else {
+        console.log('Technical work')
+    }
+}
+check_age(17)
+check_age(18)
+check_age(61)
+
+
+
+// 2*:
+// Преобразовать задание 1* таким образом, 
+// чтобы первым делом в функции проверялся
+//  тип данных. И если он не Number - кидалась ошибка.
+console.log('2*')
+
+
+const check_age2 = function(age){
+if (typeof(age)=='number'){
+     if (age < age_2){
+            console.log('You do not have access cause your age is ' + age + ' It is less then')
+        }
+        else if (age >=  age_2 && age <  age_3){
+            console.log('Welcome!')
+        }
+        else if (age  > age_3){
+          console.log('Keep calm and look Culture channel!')
+        }
+        else {
+            console.log('Technical work')
+        }
+    }else {console.log('Unexpected symbols. \tPlease enter the number')}
+}
+check_age2(30)
+check_age2('fnfkld')
+
+// 3**:
+// Преобразовать 2* таким образом, чтобы значение
+//  '2' (строка в которой лежит ТОЛЬКО ЦИФРА)
+//  пропускалось, преобразовываясь в number
+console.log('3*')
+
+const check_age3 = function(age){
+    if (age && !isNaN(age)){    //isNaN(Not A Number) retern 'true' when variable is NaN 
+         if (age < age_2){
+                console.log('You do not have access cause your age is ' + age + ' It is less then')
+            }
+            else if (age >=  age_2 && age <  age_3){
+                console.log('Welcome!')
+            }
+            else if (age  > age_3){
+              console.log('Keep calm and look Culture channel!')
+            }
+            else {
+                console.log('Technical work')
+            }
+   }else {console.log('Unexpected symbols. \tPlease enter the number')}
+    }
+    check_age3('')
+    check_age3('90')
+    check_age3(3)
+    check_age3('ddddd')
+    check_age3('0')
+    
+// 4***:
+// Преобразовать задание 3* таким образом,
+//  чтобы возраст вводится используя функцию prompt 
+// в привязанной верстке
+console.log('4*')
+
+let inputAge = prompt('Please enter your age');
+
+const check_age4 = function(age){
+    if (age && !isNaN(age)){    //isNaN(Not A Number) retern 'true' when variable is NaN 
+         if (age < age_2){
+                console.log('You do not have access cause your age is ' + age + ' It is less then')
+            }
+            else if (age >=  age_2 && age <  age_3){
+                console.log('Welcome!')
+            }
+            else if (age  > age_3){
+              console.log('Keep calm and look Culture channel!')
+            }
+            else {
+                console.log('Technical work')
+            }
+   }else {console.log('Unexpected symbols. \tPlease enter the number')}
+    }
+    check_age4(inputAge)
+   
