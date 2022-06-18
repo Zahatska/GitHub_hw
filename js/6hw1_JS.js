@@ -174,18 +174,18 @@ let inputAge = prompt('Please enter your age');
 const check_age4 = function(age){
     if (age && !isNaN(age)){    //isNaN(Not A Number) retern 'true' when variable is NaN 
          if (age < age_2){
-                console.log('You do not have access cause your age is ' + age + ' It is less then')
+                alert('You do not have access cause your age is ' + age + ' It is less then')
             }
             else if (age >=  age_2 && age <  age_3){
-                console.log('Welcome!')
+                alert('Welcome!')
             }
             else if (age  > age_3){
-              console.log('Keep calm and look Culture channel!')
+                alert('Keep calm and look Culture channel!')
             }
             else {
-                console.log('Technical work')
+                alert('Technical work')
             }
-   }else {console.log('Unexpected symbols. \tPlease enter the number')}
+   }else {alert('Unexpected symbols. \tPlease enter the number')}
     }
     check_age4(inputAge)
    
