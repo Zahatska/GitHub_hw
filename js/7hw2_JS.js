@@ -27,18 +27,26 @@ twoIn(6);
 // :):):):)
 // :):):):):)
 let smile = ":)";
+let result = "";
 let i = 0;
 while (i <= 5) {
-  console.log(smile);
+  result += smile;
   i++;
-  smile += ":)";
+  console.log(result);
 }
 
 // 2*. Преобразовать 2 задачу в функцию, принимающую на
 //  вход строку, которая и будет выводиться в консоль
 // (как в условии смайлик), а также количество строк для вывода
 // e.g. function printSmile(stroka, numberOfRows)
-function printSmile(stroka, numberOfRows) {}
+function printSmile(row, numberOfRows) {
+  let result = "";
+  for (let i = 0; i < numberOfRows; i++) {
+    result += row;
+    console.log(result);
+  }
+}
+printSmile("text ", 5);
 
 // 3**.  Написать функцию, которая принимает на вход слово.
 //  Задача функции посчитать и вывести в консоль, сколько в
@@ -47,6 +55,23 @@ function printSmile(stroka, numberOfRows) {}
 // В консоли:
 // Слово (word) состоит из  (число) гласных и
 // (число) согласных букв
+const getWordStructure = (word) => {
+  i = 0;
+  const vowels = ["a", "e", "i", "o", "u", "y"];
+  const consonants = "qwrtpsdfghjklzxcvbnm".split(""); // разбивает стрингу на массив, отдельно каждый элемент
+  let sumVowels = 0;
+  let sumConsonants = 0;
+  for (i; word[i].toLowwerCase === vowels; i++) {
+    return (sumVowels += 1);
+  }
+  for (i; word[i].toLowwerCase === consonants; i++) {
+    return (sumConsonants += 1);
+  }
+  console.log(
+    `word ${word} contains ${sumVowels} vowels and ${sumConsonants} consonants! `
+  );
+};
+getWordStructure("leto");
 
 // Проверки: 'case', 'Case', 'Check-list'
 
@@ -55,3 +80,5 @@ function printSmile(stroka, numberOfRows) {}
 // e.g. function isPalindrom(word)
 
 // Проверки: 'abba', 'Abba'
+
+// почитай про тот же метод массива forEach, что он принимает в себя и как через переменную общается с данными
